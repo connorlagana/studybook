@@ -27,7 +27,7 @@ private func fetchCards() {
         let cards = try context.fetch(fetchRequest)
         
         cards.forEach { (flash) in
-            print("Flashcard here", flash)
+            print(flash ?? "")
         }
         
     } catch let fetchErr {
@@ -65,7 +65,17 @@ private func handleSave() {
 
 struct ContentView: View {
     var body: some View {
-        Text("Flashcard init")
+        VStack {
+            Text("Penis")
+            Text("Penis2")
+            Button(action: handleSave) {
+                Text("save")
+                }
+            Button(action: fetchCards) {
+                Text("fetch")
+                }
+            }
+        
     }
 }
 
