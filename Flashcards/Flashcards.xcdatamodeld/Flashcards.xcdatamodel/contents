@@ -4,7 +4,11 @@
         <attribute name="answer" optional="YES" attributeType="String"/>
         <attribute name="question" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES" codeGenerationType="class">
+        <attribute name="subName" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
         <element name="Flashcard" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Subject" positionX="-63" positionY="0" width="128" height="58"/>
     </elements>
 </model>

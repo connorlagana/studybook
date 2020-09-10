@@ -63,21 +63,36 @@ private func handleSave() {
     }
 }
 
+
+
+struct subject: Identifiable {
+    let id: Int
+    let name: String
+}
+
+
+
 struct ContentView: View {
+    
+    let classes: [subject] = [.init(id: 0, name: "Economics"), .init(id: 1, name: "Finance"), .init(id: 2, name: "Marketing")]
+    
     var body: some View {
         VStack {
-            Text("Penis")
-            Text("Penis2")
-            Button(action: handleSave) {
-                Text("save")
-                }
-            Button(action: fetchCards) {
-                Text("fetch")
-                }
+            ForEach(classes, id: \.id) { clInd in
+                Text(clInd.name)
+            }
             }
         
     }
 }
+    
+    
+    struct ClassView: View {
+        let name: String
+        var body: some View {
+            Text(name)
+        }
+    }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
